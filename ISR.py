@@ -12,3 +12,9 @@ def ISR(Tabla,Salario):
 	for fila in Tabla:
 		if Salario <= fila[1] and Salario >= fila[0]:
 			print(fila[0],fila[1])
+			return fila
+
+Tabla = np.loadtxt('TablaMensual.csv',skiprows=1,delimiter = ',')
+
+datos = ISR(Tabla,30000)
+
