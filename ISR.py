@@ -8,4 +8,7 @@ def ISR(Tabla,Salario):
 	Tabla: Matriz con los datos relevantes para el calculo
 	Salario: Salario mensual para el que deseamos calcular
 	'''
-	continue
+	
+	for fila in Tabla:
+		if Salario <= fila[1] and Salario >= fila[0]:
+			print(fila[0],fila[1])
