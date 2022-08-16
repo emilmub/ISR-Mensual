@@ -11,10 +11,14 @@ def ISR(Tabla,Salario):
 	
 	for fila in Tabla:
 		if Salario <= fila[1] and Salario >= fila[0]:
-			print(fila[0],fila[1])
-			return fila
+			cargoFijo = fila[2]
+			diferencia = Salario - fila[0]
+			porcentaje = fila[3]
+			ISR = cargoFijo + diferencia*porcentaje
+			return ISR
 
 Tabla = np.loadtxt('TablaMensual.csv',skiprows=1,delimiter = ',')
 
-datos = ISR(Tabla,30000)
+Impuesto = ISR(Tabla,30000)
+print(Impuesto)
 
